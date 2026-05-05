@@ -1,0 +1,34 @@
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400..900&family=Rajdhani:wght@300;400;500;600;700&display=swap');
+
+
+
+
+@import "tailwindcss";
+
+
+/* Now your CSS rules and font-face declarations */
+
+.orbitron {
+  font-family: "Orbitron", sans-serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+}
+
+.rajdhani {
+  font-family: "Rajdhani", sans-serif;
+  font-style: normal;
+}
+
+
+
+@font-face {
+  font-family: 'BlowBrush';
+  src: url('/fonts/BlowBrush-Regular.woff2') format('woff2'),
+       url('/fonts/BlowBrush-Regular.ttf') format('truetype');
+  font-display: swap;
+}
+
+.blowbrush {
+   font-family: 'BlowBrush' !important;
+}
