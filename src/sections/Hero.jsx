@@ -14,18 +14,13 @@ const Hero = () => {
         <Aurora
           colorStops={["#7f1d1d", "#000000", "#7f1d1d"]}
           blend={0.4}
-          
           amplitude={1.0}
-          speed={1}
+          speed={1.5}
         />
       </div>
 
       {/* Hero image overlay */}
-      <img
-        src={image}
-        alt="Hero"
-        className="absolute w-full h-full object-cover z-0"
-      />
+      <img src={image} alt="Hero" className="absolute w-full h-full object-cover z-0" />
 
       {/* Gradient overlay on top of image */}
       <div className="absolute inset-0 z-10 bg-gradient-to-r from-red-900/30 via-black/60 to-red-900/50" />
@@ -33,9 +28,7 @@ const Hero = () => {
       {/* Content container */}
       <div className="relative z-20 w-full h-full flex items-center justify-center text-white px-4">
         <div className="flex flex-col items-center text-center max-w-4xl mb-[10vh]">
-          <h1 className="orbitron text-[6vw] font-bold tracking-widest text-gray-200">
-            CALCUTTA
-          </h1>
+          <h1 className="orbitron text-[6vw] font-bold tracking-widest text-gray-200">CALCUTTA</h1>
 
           <div className="flex items-center gap-4 mt-2">
             <h2 className="blowbrush text-[8.5vw] leading-none text-transparent bg-clip-text bg-gradient-to-r from-red-500 via-red-600 to-red-900 drop-shadow-[0_0_25px_rgba(255,0,60,0.8)]">
