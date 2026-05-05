@@ -1,5 +1,6 @@
 import React from "react";
 import aboutImg from "../assets/Images/about.png";
+import ScrollReveal from "../Components/ScrollReveal";
 
 const About = () => {
   return (
@@ -23,17 +24,31 @@ const About = () => {
 
       {/* Description paragraphs */}
       <div className="flex flex-col items-center justify-center mt-[7vh] space-y-6 w-full px-6 z-10">
-        <p className="text-green-400 max-w-4xl rajdhani text-[1.5vw] text-center leading-relaxed">
+        <ScrollReveal
+          baseOpacity={0.1}
+          enableBlur
+          
+          baseRotation={3}
+          blurStrength={4}
+          textClassName="text-green-400 max-w-4xl rajdhani text-[1.5vw] text-center leading-relaxed"
+        >
           Calcutta Hacks 2.0 is an intense 36-hour hackathon where developers, designers, and
-          innovators come together to build real solutions. It’s a space to turn ideas into working
-          products, collaborate with talented people, and create something meaningful under
-          pressure.
-        </p>
-        <p className="text-green-400 max-w-4xl rajdhani text-[1.5vw] text-center leading-relaxed">
+          innovators come together to build real solutions 💡. It’s a space to turn ideas into
+          working products 🚀, collaborate with talented people 🤝, and create something meaningful
+          under pressure ⏳.
+        </ScrollReveal>
+
+        <ScrollReveal
+          baseOpacity={0.1}
+          enableBlur
+          baseRotation={2}
+          blurStrength={5}
+          textClassName="text-green-400 max-w-4xl rajdhani text-[1.5vw] text-center leading-relaxed"
+        >
           This hackathon is your chance to learn fast, build real projects, and grow your skills.
           You’ll work in teams, solve real problems, connect with others, and showcase what you can
           create when time is limited and ideas matter.
-        </p>
+        </ScrollReveal>
       </div>
 
       {/* Image */}
