@@ -10,7 +10,7 @@ function App() {
     <div className='w-screen flex flex-col bg-black relative'>
      <Nav />
      <Hero />
-     <div className="h-screen bg-red-200 w-screen"></div>
+     <div className="h-screen  w-screen"></div>
     </div>
   )
 }
