@@ -1,5 +1,9 @@
 import React from 'react'
 import image from '../assets/Images/hero3.png'
+import { FaCalendar, FaLocationDot } from 'react-icons/fa6'
+import HeroGlassBarCard from '../Components/HeroGlassBarCard'
+import { IoIosPeople } from 'react-icons/io'
+import { IoInformationCircle } from 'react-icons/io5'
 
 const Hero = () => {
   return (
@@ -53,7 +57,14 @@ const Hero = () => {
 
       {/* 🔻 Bottom Glass Bar */}
       <div className="absolute bottom-0 w-full flex justify-center z-30">
-        <div className="w-[80%] h-[9vh] bg-black/80 backdrop-blur-md border border-red-900/40 rounded-t-xl shadow-[0_0_20px_rgba(255,0,60,0.2)]"></div>
+        <div className="flex items-center justify-between p-2 w-fit h-[9vh] bg-black/80 backdrop-blur-md border border-red-900/40 rounded-t-xl shadow-[0_0_20px_rgba(255,0,60,0.2)]">
+        
+        <HeroGlassBarCard title={'Date'} highlight={'24th - 26th Dec'} icon={<FaCalendar className='text-4xl text-red-900' />} />
+         <HeroGlassBarCard title={'Venue'} highlight={'Kolkata, India'} icon={<FaLocationDot className='text-4xl text-red-900' /> }/>
+          <HeroGlassBarCard title={'Format'} highlight={'Offline'} icon={<IoInformationCircle className='text-4xl text-red-900'/>}/>
+           <HeroGlassBarCard title={'Participarns'}  highlight={'5000+'} icon={<IoIosPeople className='text-4xl text-red-900'/>}/>
+            
+        </div>
       </div>
 
     </div>
