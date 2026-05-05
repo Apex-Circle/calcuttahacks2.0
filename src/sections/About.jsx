@@ -27,7 +27,6 @@ const About = () => {
         <ScrollReveal
           baseOpacity={0.1}
           enableBlur
-          
           baseRotation={3}
           blurStrength={4}
           textClassName="text-green-400 max-w-4xl rajdhani text-[1.5vw] text-center leading-relaxed"
