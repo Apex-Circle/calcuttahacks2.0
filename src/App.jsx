@@ -139,7 +139,7 @@ function App() {
         >
           <LogoLoop
             logos={calcuttaLogosTop}
-            speed={80}
+            speed={60}
             direction="left"
             logoHeight={80}
             gap={48}
