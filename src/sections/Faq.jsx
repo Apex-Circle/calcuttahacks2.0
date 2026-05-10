@@ -1,53 +1,53 @@
-import React, { useState } from 'react';
+import React, { useState } from "react";
 
 const faqs = [
   {
-    question: 'What is Calcutta <Hacks/>?',
+    question: "What is Calcutta <Hacks/>?",
     answer:
-      'Calcutta <Hacks/> is a 24-hour hackathon celebrating the heritage of Kolkata while fostering innovation and creativity. It brings together 200+ hackers to build innovative solutions and network with industry experts.',
+      "Calcutta <Hacks/> is a 24-hour hackathon celebrating the heritage of Kolkata while fostering innovation and creativity. It brings together 200+ hackers to build innovative solutions and network with industry experts.",
   },
   {
-    question: 'When and where is the event?',
+    question: "When and where is the event?",
     answer:
-      'The hackathon will be held on 13th-14th December 2025 at Techno India University, Saltlake Sector V, Kolkata, West Bengal.',
+      "The hackathon will be held on 13th-14th December 2025 at Techno India University, Saltlake Sector V, Kolkata, West Bengal.",
   },
   {
-    question: 'Who can participate?',
+    question: "Who can participate?",
     answer:
       "The hackathon is open to all students, developers, designers, and tech enthusiasts. Whether you're a beginner or an experienced hacker, everyone is welcome!",
   },
   {
-    question: 'How do I register?',
+    question: "How do I register?",
     answer:
       'You can register through our Devfolio page. Click on the "Register Now" or "Apply with Devfolio" button on our website to get started.',
   },
   {
-    question: 'What is the team size?',
+    question: "What is the team size?",
     answer:
-      'Teams can have 2-4 members. You can also register individually and find teammates through our Discord community before or during the event.',
+      "Teams can have 2-4 members. You can also register individually and find teammates through our Discord community before or during the event.",
   },
   {
-    question: 'Is there a registration fee?',
+    question: "Is there a registration fee?",
     answer:
-      'No, participation in Calcutta <Hacks/> is completely free! We provide meals, swag, and an amazing experience at no cost.',
+      "No, participation in Calcutta <Hacks/> is completely free! We provide meals, swag, and an amazing experience at no cost.",
   },
   {
-    question: 'What should I bring?',
+    question: "What should I bring?",
     answer:
       "Bring your laptop, chargers, student ID, and lots of enthusiasm! We'll provide WiFi, food, beverages, and a creative environment.",
   },
   {
-    question: 'Are there any prizes?',
+    question: "Are there any prizes?",
     answer:
-      'Yes! We have exciting prizes for winners across different tracks, along with special category prizes and swag for all participants.',
+      "Yes! We have exciting prizes for winners across different tracks, along with special category prizes and swag for all participants.",
   },
   {
-    question: 'Will there be mentors available?',
+    question: "Will there be mentors available?",
     answer:
-      'Absolutely! Experienced mentors and industry experts will be available throughout the hackathon to guide you and help with technical challenges.',
+      "Absolutely! Experienced mentors and industry experts will be available throughout the hackathon to guide you and help with technical challenges.",
   },
   {
-    question: 'What are the judging criteria?',
+    question: "What are the judging criteria?",
     answer:
       "Projects will be judged on innovation, technical complexity, design, feasibility, and presentation. Bonus points for projects that celebrate Kolkata's heritage!",
   },
@@ -59,7 +59,10 @@ const FAQ = () => {
   const toggle = (i) => setOpenIndex(openIndex === i ? null : i);
 
   return (
-    <section id="faq" className="w-screen flex flex-col items-center py-[8vh] relative overflow-hidden">
+    <section
+      id="faq"
+      className="w-screen flex flex-col items-center py-[8vh] relative overflow-hidden"
+    >
       {/* Ambient glow blobs */}
       <div className="absolute top-[10%] left-[8%] w-[30vh] h-[30vh] rounded-full bg-red-600 opacity-30 filter blur-3xl animate-pulse pointer-events-none" />
       <div className="absolute bottom-[10%] right-[8%] w-[30vh] h-[30vh] rounded-full bg-red-800 opacity-25 filter blur-3xl animate-pulse pointer-events-none" />
@@ -100,7 +103,7 @@ const FAQ = () => {
                 strokeWidth="2"
                 strokeLinecap="round"
                 strokeLinejoin="round"
-                className={`flex-shrink-0 text-red-600 transition-transform duration-300 ${openIndex === i ? 'rotate-180' : ''}`}
+                className={`flex-shrink-0 text-red-600 transition-transform duration-300 ${openIndex === i ? "rotate-180" : ""}`}
               >
                 <polyline points="6 9 12 15 18 9" />
               </svg>
@@ -108,13 +111,11 @@ const FAQ = () => {
 
             <div
               className={`overflow-hidden transition-all duration-300 ${
-                openIndex === i ? 'max-h-60' : 'max-h-0'
+                openIndex === i ? "max-h-60" : "max-h-0"
               }`}
             >
               <div className="px-6 pb-5 border-t border-red-900/30 pt-4">
-                <p className="rajdhani text-[1.25vw] text-gray-400 leading-relaxed">
-                  {faq.answer}
-                </p>
+                <p className="rajdhani text-[1.25vw] text-gray-400 leading-relaxed">{faq.answer}</p>
               </div>
             </div>
           </div>

@@ -8,7 +8,6 @@ const Nav = () => {
   return (
     <nav className="w-screen fixed top-0 left-0 z-50 bg-[#0a0a0a] border-b border-red-900/40">
       <div className="max-w-7xl mx-auto px-6 h-[6vh] min-h-[52px] flex items-center justify-between gap-6">
-
         {/* Logo */}
         <div className="flex items-center gap-2 select-none shrink-0">
           <span className="orbitron text-white font-bold text-[clamp(13px,1.3vw,20px)] tracking-widest uppercase">
@@ -54,9 +53,13 @@ const Nav = () => {
             <span
               key={i}
               className={`block w-5 h-0.5 bg-red-500 transition-all duration-300 ${
-                open && i === 0 ? "rotate-45 translate-y-1.5" :
-                open && i === 1 ? "opacity-0" :
-                open && i === 2 ? "-rotate-45 -translate-y-1.5" : ""
+                open && i === 0
+                  ? "rotate-45 translate-y-1.5"
+                  : open && i === 1
+                    ? "opacity-0"
+                    : open && i === 2
+                      ? "-rotate-45 -translate-y-1.5"
+                      : ""
               }`}
             />
           ))}

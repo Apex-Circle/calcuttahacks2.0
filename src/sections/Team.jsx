@@ -1,8 +1,18 @@
-import { useState, useMemo, useRef } from 'react';
-import { gsap } from 'gsap';
-import teamData from '../data/team.json';
+import { useState, useMemo, useRef } from "react";
+import { gsap } from "gsap";
+import teamData from "../data/team.json";
 
-const departments = ['All', 'Leadership', 'Web', 'Design', 'Social Media', 'PR & Outreach', 'Management', 'Operations', 'AI & ML'];
+const departments = [
+  "All",
+  "Leadership",
+  "Web",
+  "Design",
+  "Social Media",
+  "PR & Outreach",
+  "Management",
+  "Operations",
+  "AI & ML",
+];
 
 const LinkedInIcon = () => (
   <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
@@ -15,14 +25,14 @@ const TeamCard = ({ member }) => {
 
   return (
     <a
-      href={member.socials.linkedin !== '#' ? member.socials.linkedin : undefined}
+      href={member.socials.linkedin !== "#" ? member.socials.linkedin : undefined}
       target="_blank"
       rel="noopener noreferrer"
       className="group flex flex-col w-full cursor-pointer"
-      style={{ textDecoration: 'none' }}
+      style={{ textDecoration: "none" }}
     >
       {/* Fixed-ratio image container */}
-      <div className="relative w-full overflow-hidden rounded-xl" style={{ aspectRatio: '3/4' }}>
+      <div className="relative w-full overflow-hidden rounded-xl" style={{ aspectRatio: "3/4" }}>
         <img
           src={member.image}
           alt={member.name}
@@ -50,15 +60,19 @@ const TeamCard = ({ member }) => {
         <h3 className="orbitron text-[clamp(10px,0.9vw,15px)] font-bold text-red-500 uppercase tracking-wide leading-tight group-hover:text-red-400 transition-colors truncate">
           {member.name}
         </h3>
-        <p className="rajdhani text-[clamp(10px,0.85vw,14px)] text-gray-400 mt-0.5 truncate">{member.role}</p>
-        <p className="rajdhani text-[clamp(9px,0.75vw,13px)] text-gray-600 truncate">{member.handle}</p>
+        <p className="rajdhani text-[clamp(10px,0.85vw,14px)] text-gray-400 mt-0.5 truncate">
+          {member.role}
+        </p>
+        <p className="rajdhani text-[clamp(9px,0.75vw,13px)] text-gray-600 truncate">
+          {member.handle}
+        </p>
       </div>
     </a>
   );
 };
 
 const Team = () => {
-  const [activeDept, setActiveDept] = useState('All');
+  const [activeDept, setActiveDept] = useState("All");
   const gridRef = useRef(null);
   const fadeRef = useRef(null);
   const pos = useRef({ x: 0, y: 0 });
@@ -66,17 +80,17 @@ const Team = () => {
   const setY = useRef(null);
 
   const filtered = useMemo(() => {
-    if (activeDept === 'All') return teamData;
+    if (activeDept === "All") return teamData;
     return teamData.filter((m) =>
-      Array.isArray(m.department) ? m.department.includes(activeDept) : m.department === activeDept
+      Array.isArray(m.department) ? m.department.includes(activeDept) : m.department === activeDept,
     );
   }, [activeDept]);
 
   const initGrid = (el) => {
     if (!el) return;
     gridRef.current = el;
-    setX.current = gsap.quickSetter(el, '--x', 'px');
-    setY.current = gsap.quickSetter(el, '--y', 'px');
+    setX.current = gsap.quickSetter(el, "--x", "px");
+    setY.current = gsap.quickSetter(el, "--y", "px");
     const { width, height } = el.getBoundingClientRect();
     pos.current = { x: width / 2, y: height / 2 };
     setX.current(pos.current.x);
@@ -89,7 +103,7 @@ const Team = () => {
       x: e.clientX - r.left,
       y: e.clientY - r.top,
       duration: 0.45,
-      ease: 'power3.out',
+      ease: "power3.out",
       onUpdate: () => {
         setX.current?.(pos.current.x);
         setY.current?.(pos.current.y);
@@ -104,7 +118,10 @@ const Team = () => {
   };
 
   return (
-    <section id="team" className="w-screen flex flex-col items-center py-[8vh] relative overflow-hidden">
+    <section
+      id="team"
+      className="w-screen flex flex-col items-center py-[8vh] relative overflow-hidden"
+    >
       {/* Ambient blobs */}
       <div className="absolute top-[5%] left-[10%] w-[30vh] h-[30vh] rounded-full bg-red-600 opacity-20 filter blur-3xl animate-pulse pointer-events-none" />
       <div className="absolute bottom-[5%] right-[10%] w-[30vh] h-[30vh] rounded-full bg-red-800 opacity-15 filter blur-3xl animate-pulse pointer-events-none" />
@@ -124,8 +141,8 @@ const Team = () => {
             onClick={() => setActiveDept(dept)}
             className={`orbitron text-[clamp(9px,0.7vw,12px)] font-bold uppercase tracking-widest px-4 py-2 rounded border transition-all duration-200 ${
               activeDept === dept
-                ? 'bg-red-600 border-red-600 text-white shadow-[0_0_14px_rgba(220,38,38,0.6)]'
-                : 'bg-transparent border-white/20 text-gray-400 hover:border-red-600/60 hover:text-white'
+                ? "bg-red-600 border-red-600 text-white shadow-[0_0_14px_rgba(220,38,38,0.6)]"
+                : "bg-transparent border-white/20 text-gray-400 hover:border-red-600/60 hover:text-white"
             }`}
           >
             {dept}
@@ -139,7 +156,7 @@ const Team = () => {
         onPointerMove={handleMove}
         onPointerLeave={handleLeave}
         className="relative w-[90%] max-w-7xl mt-[6vh] z-10 grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-6"
-        style={{ '--x': '50%', '--y': '50%', '--r': '350px' }}
+        style={{ "--x": "50%", "--y": "50%", "--r": "350px" }}
       >
         {filtered.map((member) => (
           <TeamCard key={member.id} member={member} />
@@ -149,11 +166,13 @@ const Team = () => {
         <div
           className="absolute inset-0 pointer-events-none z-20"
           style={{
-            backdropFilter: 'grayscale(1) brightness(0.75)',
-            WebkitBackdropFilter: 'grayscale(1) brightness(0.75)',
-            background: 'rgba(0,0,0,0.001)',
-            maskImage: 'radial-gradient(circle var(--r) at var(--x) var(--y), transparent 0%, transparent 15%, rgba(0,0,0,0.10) 30%, rgba(0,0,0,0.22) 45%, rgba(0,0,0,0.35) 60%, rgba(0,0,0,0.50) 75%, rgba(0,0,0,0.68) 88%, white 100%)',
-            WebkitMaskImage: 'radial-gradient(circle var(--r) at var(--x) var(--y), transparent 0%, transparent 15%, rgba(0,0,0,0.10) 30%, rgba(0,0,0,0.22) 45%, rgba(0,0,0,0.35) 60%, rgba(0,0,0,0.50) 75%, rgba(0,0,0,0.68) 88%, white 100%)',
+            backdropFilter: "grayscale(1) brightness(0.75)",
+            WebkitBackdropFilter: "grayscale(1) brightness(0.75)",
+            background: "rgba(0,0,0,0.001)",
+            maskImage:
+              "radial-gradient(circle var(--r) at var(--x) var(--y), transparent 0%, transparent 15%, rgba(0,0,0,0.10) 30%, rgba(0,0,0,0.22) 45%, rgba(0,0,0,0.35) 60%, rgba(0,0,0,0.50) 75%, rgba(0,0,0,0.68) 88%, white 100%)",
+            WebkitMaskImage:
+              "radial-gradient(circle var(--r) at var(--x) var(--y), transparent 0%, transparent 15%, rgba(0,0,0,0.10) 30%, rgba(0,0,0,0.22) 45%, rgba(0,0,0,0.35) 60%, rgba(0,0,0,0.50) 75%, rgba(0,0,0,0.68) 88%, white 100%)",
           }}
         />
 
@@ -162,11 +181,13 @@ const Team = () => {
           ref={fadeRef}
           className="absolute inset-0 pointer-events-none z-30"
           style={{
-            backdropFilter: 'grayscale(1) brightness(0.75)',
-            WebkitBackdropFilter: 'grayscale(1) brightness(0.75)',
-            background: 'rgba(0,0,0,0.001)',
-            maskImage: 'radial-gradient(circle var(--r) at var(--x) var(--y), white 0%, white 15%, rgba(255,255,255,0.90) 30%, rgba(255,255,255,0.78) 45%, rgba(255,255,255,0.65) 60%, rgba(255,255,255,0.50) 75%, rgba(255,255,255,0.32) 88%, transparent 100%)',
-            WebkitMaskImage: 'radial-gradient(circle var(--r) at var(--x) var(--y), white 0%, white 15%, rgba(255,255,255,0.90) 30%, rgba(255,255,255,0.78) 45%, rgba(255,255,255,0.65) 60%, rgba(255,255,255,0.50) 75%, rgba(255,255,255,0.32) 88%, transparent 100%)',
+            backdropFilter: "grayscale(1) brightness(0.75)",
+            WebkitBackdropFilter: "grayscale(1) brightness(0.75)",
+            background: "rgba(0,0,0,0.001)",
+            maskImage:
+              "radial-gradient(circle var(--r) at var(--x) var(--y), white 0%, white 15%, rgba(255,255,255,0.90) 30%, rgba(255,255,255,0.78) 45%, rgba(255,255,255,0.65) 60%, rgba(255,255,255,0.50) 75%, rgba(255,255,255,0.32) 88%, transparent 100%)",
+            WebkitMaskImage:
+              "radial-gradient(circle var(--r) at var(--x) var(--y), white 0%, white 15%, rgba(255,255,255,0.90) 30%, rgba(255,255,255,0.78) 45%, rgba(255,255,255,0.65) 60%, rgba(255,255,255,0.50) 75%, rgba(255,255,255,0.32) 88%, transparent 100%)",
             opacity: 1,
           }}
         />

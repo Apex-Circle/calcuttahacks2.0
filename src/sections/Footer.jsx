@@ -1,4 +1,4 @@
-import React from 'react';
+import React from "react";
 
 const Github = ({ size = 18 }) => (
   <svg width={size} height={size} viewBox="0 0 24 24" fill="currentColor">
@@ -13,32 +13,92 @@ const Twitter = ({ size = 18 }) => (
 );
 
 const Instagram = ({ size = 18 }) => (
-  <svg width={size} height={size} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-    <rect x="2" y="2" width="20" height="20" rx="5" ry="5" /><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z" /><line x1="17.5" y1="6.5" x2="17.51" y2="6.5" />
+  <svg
+    width={size}
+    height={size}
+    viewBox="0 0 24 24"
+    fill="none"
+    stroke="currentColor"
+    strokeWidth="2"
+    strokeLinecap="round"
+    strokeLinejoin="round"
+  >
+    <rect x="2" y="2" width="20" height="20" rx="5" ry="5" />
+    <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z" />
+    <line x1="17.5" y1="6.5" x2="17.51" y2="6.5" />
   </svg>
 );
 
 const Mail = ({ size = 18 }) => (
-  <svg width={size} height={size} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-    <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" /><polyline points="22,6 12,13 2,6" />
+  <svg
+    width={size}
+    height={size}
+    viewBox="0 0 24 24"
+    fill="none"
+    stroke="currentColor"
+    strokeWidth="2"
+    strokeLinecap="round"
+    strokeLinejoin="round"
+  >
+    <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" />
+    <polyline points="22,6 12,13 2,6" />
   </svg>
 );
 
 const Cpu = ({ size = 32 }) => (
-  <svg width={size} height={size} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-    <rect x="4" y="4" width="16" height="16" rx="2" /><rect x="9" y="9" width="6" height="6" /><line x1="9" y1="1" x2="9" y2="4" /><line x1="15" y1="1" x2="15" y2="4" /><line x1="9" y1="20" x2="9" y2="23" /><line x1="15" y1="20" x2="15" y2="23" /><line x1="20" y1="9" x2="23" y2="9" /><line x1="20" y1="14" x2="23" y2="14" /><line x1="1" y1="9" x2="4" y2="9" /><line x1="1" y1="14" x2="4" y2="14" />
+  <svg
+    width={size}
+    height={size}
+    viewBox="0 0 24 24"
+    fill="none"
+    stroke="currentColor"
+    strokeWidth="2"
+    strokeLinecap="round"
+    strokeLinejoin="round"
+  >
+    <rect x="4" y="4" width="16" height="16" rx="2" />
+    <rect x="9" y="9" width="6" height="6" />
+    <line x1="9" y1="1" x2="9" y2="4" />
+    <line x1="15" y1="1" x2="15" y2="4" />
+    <line x1="9" y1="20" x2="9" y2="23" />
+    <line x1="15" y1="20" x2="15" y2="23" />
+    <line x1="20" y1="9" x2="23" y2="9" />
+    <line x1="20" y1="14" x2="23" y2="14" />
+    <line x1="1" y1="9" x2="4" y2="9" />
+    <line x1="1" y1="14" x2="4" y2="14" />
   </svg>
 );
 
 const Terminal = ({ size = 16 }) => (
-  <svg width={size} height={size} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-    <polyline points="4 17 10 11 4 5" /><line x1="12" y1="19" x2="20" y2="19" />
+  <svg
+    width={size}
+    height={size}
+    viewBox="0 0 24 24"
+    fill="none"
+    stroke="currentColor"
+    strokeWidth="2"
+    strokeLinecap="round"
+    strokeLinejoin="round"
+  >
+    <polyline points="4 17 10 11 4 5" />
+    <line x1="12" y1="19" x2="20" y2="19" />
   </svg>
 );
 
 const Globe = ({ size = 14 }) => (
-  <svg width={size} height={size} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-    <circle cx="12" cy="12" r="10" /><line x1="2" y1="12" x2="22" y2="12" /><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z" />
+  <svg
+    width={size}
+    height={size}
+    viewBox="0 0 24 24"
+    fill="none"
+    stroke="currentColor"
+    strokeWidth="2"
+    strokeLinecap="round"
+    strokeLinejoin="round"
+  >
+    <circle cx="12" cy="12" r="10" />
+    <line x1="2" y1="12" x2="22" y2="12" />
+    <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z" />
   </svg>
 );
 
@@ -53,19 +113,21 @@ const Footer = () => {
         className="absolute inset-0 opacity-10 pointer-events-none"
         style={{
           backgroundImage: `linear-gradient(#dc2626 1px, transparent 1px), linear-gradient(90deg, #dc2626 1px, transparent 1px)`,
-          backgroundSize: '40px 40px',
+          backgroundSize: "40px 40px",
         }}
       />
 
       <div className="max-w-7xl mx-auto px-6 relative z-10">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-12 mb-16">
-
           {/* Brand */}
           <div className="col-span-1">
             <div className="flex items-center gap-2 mb-4">
               <Cpu size={32} className="text-red-600" />
               <span className="blowbrush text-[2.4vw] leading-none">
-                CALCUTTA <span className="text-transparent bg-clip-text bg-gradient-to-r from-red-400 via-red-600 to-red-900">HACKS</span>
+                CALCUTTA{" "}
+                <span className="text-transparent bg-clip-text bg-gradient-to-r from-red-400 via-red-600 to-red-900">
+                  HACKS
+                </span>
               </span>
             </div>
             <p className="rajdhani text-gray-400 text-sm leading-relaxed mb-6">
@@ -73,7 +135,11 @@ const Footer = () => {
             </p>
             <div className="flex gap-4">
               {socialIcons.map((Icon, i) => (
-                <a key={i} href="#" className="p-2 bg-neutral-900 border border-white/10 hover:border-red-600 hover:text-red-500 transition-all duration-300 rounded-sm">
+                <a
+                  key={i}
+                  href="#"
+                  className="p-2 bg-neutral-900 border border-white/10 hover:border-red-600 hover:text-red-500 transition-all duration-300 rounded-sm"
+                >
                   <Icon size={20} />
                 </a>
               ))}
@@ -86,10 +152,14 @@ const Footer = () => {
               <span className="w-2 h-2 bg-red-600 rounded-full" /> Navigation
             </h4>
             <ul className="space-y-4 rajdhani text-sm text-gray-400">
-              {['Home', 'About', 'Schedule', 'Prizes', 'Sponsors'].map((link) => (
+              {["Home", "About", "Schedule", "Prizes", "Sponsors"].map((link) => (
                 <li key={link}>
-                  <a href={`#${link.toLowerCase()}`} className="hover:text-white hover:pl-2 transition-all duration-300">
-                    {'> '}{link}
+                  <a
+                    href={`#${link.toLowerCase()}`}
+                    className="hover:text-white hover:pl-2 transition-all duration-300"
+                  >
+                    {"> "}
+                    {link}
                   </a>
                 </li>
               ))}
@@ -102,10 +172,11 @@ const Footer = () => {
               <span className="w-2 h-2 bg-red-600 rounded-full" /> Resources
             </h4>
             <ul className="space-y-4 rajdhani text-sm text-gray-400">
-              {['Code of Conduct', 'Privacy Policy', 'Media Kit', 'Discord Support'].map((link) => (
+              {["Code of Conduct", "Privacy Policy", "Media Kit", "Discord Support"].map((link) => (
                 <li key={link}>
                   <a href="#" className="hover:text-white hover:pl-2 transition-all duration-300">
-                    {'> '}{link}
+                    {"> "}
+                    {link}
                   </a>
                 </li>
               ))}
@@ -131,7 +202,6 @@ const Footer = () => {
               </button>
             </div>
           </div>
-
         </div>
 
         {/* Bottom bar */}
