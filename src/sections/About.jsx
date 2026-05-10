@@ -91,7 +91,10 @@ const About = () => {
             </div>
 
             <h2 className="blowbrush text-[clamp(3rem,6vw,5.5rem)] leading-[0.95] text-transparent bg-gradient-to-r from-white via-red-300 to-red-700 bg-clip-text drop-shadow-[0_0_30px_rgba(255,0,60,0.35)]">
-              Calcutta Hacks 2.0
+              Calcutta Hacks{" "}
+              <div className="text-[clamp(2rem,5vw,5rem)] bg-gradient-to-br from-red-600 to-red-900 inline-block px-4 py-3 font-bold text-white rounded-2xl ml-4 shadow-[0_0_20px_rgba(255,0,60,0.25)]">
+                2.0
+              </div>
             </h2>
           </div>
 
