@@ -278,7 +278,7 @@ export const LogoLoop = memo(
           return (
             <li
               className={cx(
-                "flex-none text-[length:var(--logoloop-logoHeight)] leading-[1]",
+                "flex-none h-fit text-[length:var(--logoloop-logoHeight)] leading-[1]",
                 isVertical ? "mb-[var(--logoloop-gap)]" : "mr-[var(--logoloop-gap)]",
                 scaleOnHover && "overflow-visible group/item",
               )}
