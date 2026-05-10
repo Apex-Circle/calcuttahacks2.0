@@ -1,9 +1,12 @@
 import "./App.css";
-import ChromaGrid from "./assets/ChromaGrid";
+import Team from './sections/Team.jsx';
 import LogoLoop from "./Components/LogoLoop";
 import Nav from "./Components/Nav";
 import About from "./sections/About";
 import Hero from "./sections/Hero";
+import FAQ from './sections/Faq.jsx';
+import PRIZES from './sections/Prizes.jsx';
+import Footer from './sections/Footer.jsx';
 
 const imageLogos = [
   { src: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSQ_hNqJRu1uNrEfhHH5FCtN3ltoP5MBpjkWg&s", alt: "Company 1", href: "https://company1.com" },
@@ -62,29 +65,11 @@ function App() {
 
     
 
-      <div className=" w-screen flex flex-col items-center justify-center py-[8vh]">
-        <div className="flex items-center justify-center mt-[20vh] z-10">
-          <h2 className="blowbrush text-[4vw] leading-none text-transparent bg-clip-text bg-gradient-to-r from-red-400 via-red-600 to-red-900 drop-shadow-[0_0_25px_rgba(255,0,60,0.8)]">
-            Mentor
-          </h2>
-        </div>
+      <Team />
 
-        <div className="w-[80%] flex flex-wrap mt-[7vh]">
-          <ChromaGrid />
-        </div>
-      </div>
-
-      <div className=" w-screen flex flex-col items-center justify-center py-[8vh]">
-        <div className="flex items-center justify-center mt-[20vh] z-10">
-          <h2 className="blowbrush text-[4vw] leading-none text-transparent bg-clip-text bg-gradient-to-r from-red-400 via-red-600 to-red-900 drop-shadow-[0_0_25px_rgba(255,0,60,0.8)]">
-            Judge
-          </h2>
-        </div>
-
-        <div className="w-[80%] flex flex-wrap mt-[7vh]">
-          <ChromaGrid />
-        </div>
-      </div>
+<PRIZES />
+      <FAQ />
+      <Footer />
     </div>
   );
 }

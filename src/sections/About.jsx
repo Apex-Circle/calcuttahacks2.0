@@ -17,7 +17,7 @@ const About = () => {
 
       {/* Title */}
       <div className="flex items-center justify-center mt-[20vh] z-10">
-        <h2 className="blowbrush text-[4vw] leading-none text-transparent bg-clip-text bg-gradient-to-r from-red-400 via-red-600 to-red-900 drop-shadow-[0_0_25px_rgba(255,0,60,0.8)]">
+        <h2 className="blowbrush text-[clamp(28px,4vw,72px)] leading-none text-transparent bg-clip-text bg-gradient-to-r from-red-400 via-red-600 to-red-900 drop-shadow-[0_0_25px_rgba(255,0,60,0.8)]">
           About the Hackathon
         </h2>
       </div>
@@ -29,7 +29,7 @@ const About = () => {
           enableBlur
           baseRotation={3}
           blurStrength={4}
-          textClassName="text-green-400 max-w-4xl rajdhani text-[1.5vw] text-center leading-relaxed"
+          textClassName="text-green-400 max-w-4xl rajdhani text-[clamp(14px,1.5vw,24px)] text-center leading-relaxed"
         >
           Calcutta Hacks 2.0 is an intense 36-hour hackathon where developers, designers, and
           innovators come together to build real solutions 💡. It’s a space to turn ideas into
@@ -42,7 +42,7 @@ const About = () => {
           enableBlur
           baseRotation={2}
           blurStrength={5}
-          textClassName="text-green-400 max-w-4xl rajdhani text-[1.5vw] text-center leading-relaxed"
+          textClassName="text-green-400 max-w-4xl rajdhani text-[clamp(14px,1.5vw,24px)] text-center leading-relaxed"
         >
           This hackathon is your chance to learn fast, build real projects, and grow your skills.
           You’ll work in teams, solve real problems, connect with others, and showcase what you can
