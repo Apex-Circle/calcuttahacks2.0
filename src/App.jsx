@@ -7,6 +7,7 @@ import Hero from "./sections/Hero";
 import FAQ from "./sections/Faq.jsx";
 import PRIZES from "./sections/Prizes.jsx";
 import Footer from "./sections/Footer.jsx";
+import Schedules from "./sections/Schedules.jsx";
 
 const imageLogos = [
   {
@@ -129,6 +130,14 @@ function App() {
 
       <Team />
 
+     <Schedules />
+     <div
+          style={{ height: "fit-content", position: "relative", overflow: "hidden" }}
+          className="shadow-lg  bg-red-900/10 py-4 flex items-center justify-center relative  border-t border-red-500/20"
+     >
+      
+
+     </div>
       <PRIZES />
 
       <FAQ />
