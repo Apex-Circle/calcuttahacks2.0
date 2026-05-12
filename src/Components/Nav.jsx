@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 
-const links = ["About", "Tracks", "Cradles", "Schedule", "Sponsors"];
+const links = ["About", "Tracks", "Timeline", "Prizes", "Experts", "More" ];
 
 const Nav = () => {
   const [open, setOpen] = useState(false);
