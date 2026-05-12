@@ -10,6 +10,9 @@ importers:
       gsap:
         specifier: ^3.15.0
         version: 3.15.0
+      locomotive-scroll:
+        specifier: ^4.1.4
+        version: 4.1.4
       lucide-react:
         specifier: ^1.14.0
         version: 1.14.0(react@19.2.5)
@@ -28,6 +31,9 @@ importers:
       react-icons:
         specifier: ^5.6.0
         version: 5.6.0(react@19.2.5)
+      react-locomotive-scroll:
+        specifier: ^0.2.2
+        version: 0.2.2(locomotive-scroll@4.1.4)(react-dom@19.2.5(react@19.2.5))(react@19.2.5)
     devDependencies:
       "@eslint/js":
         specifier: ^10.0.1
@@ -726,6 +732,18 @@ packages:
     engines: { node: ">=6.0.0" }
     hasBin: true
 
+  bezier-easing@2.1.0:
+    resolution:
+      {
+        integrity: sha512-gbIqZ/eslnUFC1tjEvtz0sgx+xTK20wDnYMIA27VA04R7w6xxXQPZDbibjA9DTWZRA2CXtwHykkVzlCaAJAZig==,
+      }
+
+  bindall-standalone@1.0.5:
+    resolution:
+      {
+        integrity: sha512-HDI7YBWXVJk/eoGz+e4lYQQJnYp1ZHcUvAY71lVptLMhQnDm86vD73AGPw2qIlgYR3P0bjmoAcXiA8qhFejBhA==,
+      }
+
   brace-expansion@5.0.5:
     resolution:
       {
@@ -1101,6 +1119,12 @@ packages:
         integrity: sha512-oxVHkHR/EJf2CNXnWxRLW6mg7JyCCUcG0DtEGmL2ctUo1PNTin1PUil+r/+4r5MpVgC/fn1kjsx7mjSujKqIpw==,
       }
 
+  lethargy@1.0.9:
+    resolution:
+      {
+        integrity: sha512-nFM8blpCF9rqIL5mRAaTGc78W8oQixVtsD86jbEPvcI13+lDUYJf3R7DZQQL7tCiBpbGpGKMX2gwJFO9hiaOkg==,
+      }
+
   levn@0.4.1:
     resolution:
       {
@@ -1224,6 +1248,12 @@ packages:
         integrity: sha512-iPZK6eYjbxRu3uB4/WZ3EsEIMJFMqAoopl3R+zuq0UjcAm/MO6KCweDgPfP3elTztoKP3KtnVHxTn2NHBSDVUw==,
       }
     engines: { node: ">=10" }
+
+  locomotive-scroll@4.1.4:
+    resolution:
+      {
+        integrity: sha512-6i98cFF2SKg6wIPpwVPuo2FG8qL3USsdDeew78TEYZyLoqleMWNfkSDpWA6mPym4dOfTIBXc678VmGlkgx3fTA==,
+      }
 
   loose-envify@1.4.0:
     resolution:
@@ -1403,12 +1433,27 @@ packages:
         integrity: sha512-24e6ynE2H+OKt4kqsOvNd8kBpV65zoxbA4BVsEOB3ARVWQki/DHzaUoC5KuON/BiccDaCCTZBuOcfZs70kR8bQ==,
       }
 
+  react-locomotive-scroll@0.2.2:
+    resolution:
+      {
+        integrity: sha512-F+1JCUNw2sU/g+wtvbxh8Oi4FPrhPQFKY7QlK0p3D0kl2JgK0FK9fF1G43wcZccP8YBrKU81T4ZQBf/DasgVOg==,
+      }
+    peerDependencies:
+      locomotive-scroll: ^4.1.4
+      react: ^18.0.2
+
   react@19.2.5:
     resolution:
       {
         integrity: sha512-llUJLzz1zTUBrskt2pwZgLq59AemifIftw4aB7JxOqf1HY2FDaGDxgwpAPVzHU1kdWabH7FauP4i1oEeer2WCA==,
       }
     engines: { node: ">=0.10.0" }
+
+  resize-observer-polyfill@1.5.1:
+    resolution:
+      {
+        integrity: sha512-LwZrotdHOo12nQuZlHEmtuXdqGoOD0OhaxopaNFxWzInpEgaLWoVuAMbTzixuosCx2nEG58ngzW3vxdWoxIgdg==,
+      }
 
   rolldown@1.0.0-rc.17:
     resolution:
@@ -1445,6 +1490,12 @@ packages:
       }
     engines: { node: ">=8" }
 
+  smoothscroll-polyfill@0.4.4:
+    resolution:
+      {
+        integrity: sha512-TK5ZA9U5RqCwMpfoMq/l1mrH0JAR7y7KRvOBx0n2869aLxch+gT9GhN3yUfjiw+d/DiF1mKo14+hd62JyMmoBg==,
+      }
+
   source-map-js@1.2.1:
     resolution:
       {
@@ -1464,6 +1515,12 @@ packages:
         integrity: sha512-uxc/zpqFg6x7C8vOE7lh6Lbda8eEL9zmVm/PLeTPBRhh1xCgdWaQ+J1CUieGpIfm2HdtsUpRv+HshiasBMcc6A==,
       }
     engines: { node: ">=6" }
+
+  tiny-emitter@1.2.0:
+    resolution:
+      {
+        integrity: sha512-rWjF00inHeWtT5UbQYAXoMI4hL6TRMqohuKCsODyPYYmfAxqfMnXLsIeNrbdPEkNxlk++rojVilTnI9IVmEBtA==,
+      }
 
   tinyglobby@0.2.16:
     resolution:
@@ -1498,6 +1555,30 @@ packages:
     resolution:
       {
         integrity: sha512-7rKUyy33Q1yc98pQ1DAmLtwX109F7TIfWlW1Ydo8Wl1ii1SeHieeh0HHfPeL2fMXK6z0s8ecKs9frCuLJvndBg==,
+      }
+
+  use-debounce@6.0.1:
+    resolution:
+      {
+        integrity: sha512-kpvIxpa0vOLz/2I2sfNJ72mUeaT2CMNCu5BT1f2HkV9qZK27UVSOFf1sSSu+wjJE4TcR2VTXS2SM569+m3TN7Q==,
+      }
+    engines: { node: ">= 10.0.0" }
+    peerDependencies:
+      react: ">=16.8.0"
+
+  use-resize-observer@6.1.0:
+    resolution:
+      {
+        integrity: sha512-SiPcWHiIQ1CnHmb6PxbYtygqiZXR0U9dNkkbpX9VYnlstUwF8+QqpUTrzh13pjPwcjMVGR+QIC+nvF5ujfFNng==,
+      }
+    peerDependencies:
+      react: ">=16.8.0"
+      react-dom: ">=16.8.0"
+
+  virtual-scroll@1.5.2:
+    resolution:
+      {
+        integrity: sha512-7jDHwlKbHUho7CYU/HojE/VKFH8GV9P5fVWP2HCa7dRUOpVvwl93OBOKIIcb2mKd+vqsbVR/0zl0X70+3sUZqA==,
       }
 
   vite@8.0.10:
@@ -1946,6 +2027,10 @@ snapshots:
 
   baseline-browser-mapping@2.10.27: {}
 
+  bezier-easing@2.1.0: {}
+
+  bindall-standalone@1.0.5: {}
+
   brace-expansion@5.0.5:
     dependencies:
       balanced-match: 4.0.4
@@ -2147,6 +2232,8 @@ snapshots:
     dependencies:
       json-buffer: 3.0.1
 
+  lethargy@1.0.9: {}
+
   levn@0.4.1:
     dependencies:
       prelude-ls: 1.2.1
@@ -2204,6 +2291,12 @@ snapshots:
   locate-path@6.0.0:
     dependencies:
       p-locate: 5.0.0
+
+  locomotive-scroll@4.1.4:
+    dependencies:
+      bezier-easing: 2.1.0
+      smoothscroll-polyfill: 0.4.4
+      virtual-scroll: 1.5.2
 
   loose-envify@1.4.0:
     dependencies:
@@ -2291,7 +2384,18 @@ snapshots:
 
   react-is@16.13.1: {}
 
+  react-locomotive-scroll@0.2.2(locomotive-scroll@4.1.4)(react-dom@19.2.5(react@19.2.5))(react@19.2.5):
+    dependencies:
+      locomotive-scroll: 4.1.4
+      react: 19.2.5
+      use-debounce: 6.0.1(react@19.2.5)
+      use-resize-observer: 6.1.0(react-dom@19.2.5(react@19.2.5))(react@19.2.5)
+    transitivePeerDependencies:
+      - react-dom
+
   react@19.2.5: {}
+
+  resize-observer-polyfill@1.5.1: {}
 
   rolldown@1.0.0-rc.17:
     dependencies:
@@ -2324,11 +2428,15 @@ snapshots:
 
   shebang-regex@3.0.0: {}
 
+  smoothscroll-polyfill@0.4.4: {}
+
   source-map-js@1.2.1: {}
 
   tailwindcss@4.3.0: {}
 
   tapable@2.3.3: {}
+
+  tiny-emitter@1.2.0: {}
 
   tinyglobby@0.2.16:
     dependencies:
@@ -2351,6 +2459,23 @@ snapshots:
   uri-js@4.4.1:
     dependencies:
       punycode: 2.3.1
+
+  use-debounce@6.0.1(react@19.2.5):
+    dependencies:
+      react: 19.2.5
+
+  use-resize-observer@6.1.0(react-dom@19.2.5(react@19.2.5))(react@19.2.5):
+    dependencies:
+      react: 19.2.5
+      react-dom: 19.2.5(react@19.2.5)
+      resize-observer-polyfill: 1.5.1
+
+  virtual-scroll@1.5.2:
+    dependencies:
+      bindall-standalone: 1.0.5
+      lethargy: 1.0.9
+      object-assign: 4.1.1
+      tiny-emitter: 1.2.0
 
   vite@8.0.10(jiti@2.6.1):
     dependencies:
