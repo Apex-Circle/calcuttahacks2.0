@@ -48,10 +48,8 @@ const TeamCard = ({ member }) => {
         </span>
 
         {/* LinkedIn hover overlay */}
-        <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 bg-black/30">
-          <div className="p-3 bg-red-600 rounded-full text-white">
-            <LinkedInIcon />
-          </div>
+        <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 bg-red-400/10 ">
+         
         </div>
       </div>
 
