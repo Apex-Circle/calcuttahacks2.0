@@ -8,49 +8,10 @@ import FAQ from "./sections/Faq.jsx";
 import PRIZES from "./sections/Prizes.jsx";
 import Footer from "./sections/Footer.jsx";
 import Schedules from "./sections/Timeline.jsx";
+import Judges from "./sections/Judges.jsx";
+import Mentors from "./sections/Mentors.jsx";
 
-const imageLogos = [
-  {
-    src: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSQ_hNqJRu1uNrEfhHH5FCtN3ltoP5MBpjkWg&s",
-    alt: "Company 1",
-    href: "https://company1.com",
-  },
-  {
-    src: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTIygUTsIdSAR0MwbnUyNloj8ZCCWVZylTBBQ&s",
-    alt: "Company 2",
-    href: "https://company2.com",
-  },
-  {
-    src: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSL-Kt7p9AJdygzW3f7xtyCAETHMO-2xTSgew&s",
-    alt: "Company 3",
-    href: "https://company3.com",
-  },
-  {
-    src: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTyWGx49vyixrV2CW_xbXIDPiqg5tiabAH9yw&s",
-    alt: "Company 4",
-    href: "https://company4.com",
-  },
-  {
-    src: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSQ_hNqJRu1uNrEfhHH5FCtN3ltoP5MBpjkWg&s",
-    alt: "Company 1",
-    href: "https://company1.com",
-  },
-  {
-    src: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTIygUTsIdSAR0MwbnUyNloj8ZCCWVZylTBBQ&s",
-    alt: "Company 2",
-    href: "https://company2.com",
-  },
-  {
-    src: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSL-Kt7p9AJdygzW3f7xtyCAETHMO-2xTSgew&s",
-    alt: "Company 3",
-    href: "https://company3.com",
-  },
-  {
-    src: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTyWGx49vyixrV2CW_xbXIDPiqg5tiabAH9yw&s",
-    alt: "Company 4",
-    href: "https://company4.com",
-  },
-];
+
 
 const calcuttaLogosTop = Array.from({ length: 8 }).map(() => ({
   node: (
@@ -90,12 +51,16 @@ function App() {
   return (
     <div className=" w-screen flex flex-col bg-black relative">
       <Nav />
-      <Hero />
 
+      {/* Hero + Intro */}
+      <Hero />
       <About />
 
-      <div className="mt-[6vh] space-y-6">
-        <div
+      {/* Schedule / Timeline - important to show early */}
+      <Schedules />
+
+
+         <div
           style={{ height: "fit-content", position: "relative", overflow: "hidden" }}
           className="shadow-lg  bg-red-900/10 py-4 flex items-center justify-center relative rounded-3xl border border-red-500/20"
         >
@@ -118,51 +83,58 @@ function App() {
             }}
           />
         </div>
-      </div>
 
-      <div className="flex flex-col">
-        <div className="flex items-center justify-center mt-[20vh] z-10">
-          <h2 className="blowbrush text-[4vw] leading-none text-transparent bg-clip-text bg-gradient-to-r from-red-400 via-red-600 to-red-900 drop-shadow-[0_0_25px_rgba(255,0,60,0.8)]">
-            Sponsors
-          </h2>
-        </div>
-      </div>
-
-      <Team />
-
-      <Schedules />
-      <div
-        style={{ height: "fit-content", position: "relative", overflow: "hidden" }}
-        className="shadow-lg  bg-red-900/10 py-4 flex items-center justify-center relative  border-t border-red-500/20"
-      ></div>
+      {/* Prizes */}
       <PRIZES />
 
-      <FAQ />
-      <div className="mt-[6vh] space-y-6">
-        <div
+
+        
+
+      {/* Team, Judges, Mentors */}
+      <Team />
+      <Judges />
+      <Mentors />
+
+      {/* Sponsors block (logo loops) */}
+      <div className="mt-[6vh] space-y-6" data-scroll-section>
+   
+
+
+    <div
           style={{ height: "fit-content", position: "relative", overflow: "hidden" }}
           className="shadow-lg  bg-red-900/10 py-4 flex items-center justify-center relative  border-t border-red-500/20"
         >
           <LogoLoop
-            logos={calcuttaLogosTop}
+            logos={calcuttaLogosBottom}
             speed={60}
             direction="left"
-            logoHeight={80}
-            gap={48}
+            logoHeight={64}
+            gap={36}
             hoverSpeed={10}
             scaleOnHover
             fadeOut
             fadeOutColor="#000000"
-            ariaLabel="Calcutta Hacks 2.0 — top loop"
+            ariaLabel="Calcutta Hacks 2.0 — bottom loop"
             className="mix-blend-screen "
             style={{
-              "--logoloop-gap": `48px`,
-              "--logoloop-logoHeight": `80px`,
+              "--logoloop-gap": `36px`,
+              "--logoloop-logoHeight": `64px`,
               filter: "saturate(130%) contrast(105%) drop-shadow(0 6px 18px rgba(0,200,255,0.12))",
             }}
           />
         </div>
+
+        <div className="flex items-center justify-center mt-8 z-10">
+          <h2 className="blowbrush text-[4vw] leading-none text-transparent bg-clip-text bg-gradient-to-r from-red-400 via-red-600 to-red-900 drop-shadow-[0_0_25px_rgba(255,0,60,0.8)]">
+            Sponsors
+          </h2>
+        </div>
+
+       
       </div>
+
+      {/* FAQ + Footer */}
+      <FAQ />
 
       <Footer />
     </div>
