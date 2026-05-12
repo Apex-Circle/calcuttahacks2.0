@@ -133,12 +133,17 @@ export const day2Events = [
     description: "Engaging talks from industry experts to inspire and educate participants.",
     icon: <FaMicrophone className="text-red-200  text-2xl" />,
   },
-  {
+ 
+  
+];
+export const day3Events = [
+   {
     time: "12:00 PM",
     title: "Top 5 Pitching",
     description: "The top 5 teams will present their projects to the judges and audience.",
     icon: <FaTrophy className="text-red-200  text-2xl" />,
   },
+  
   {
     time: "12:30 PM",
     title: "Result Declaration",

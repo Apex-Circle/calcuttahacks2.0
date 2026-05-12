@@ -100,15 +100,15 @@ const About = () => {
 
           {/* Scroll Reveal Paragraphs */}
           <div className="space-y-6">
-            <p className="rajdhani text-[clamp(15px,1.15vw,22px)] leading-relaxed text-zinc-300">
+            <p className="rajdhani text-[clamp(15px,1.15vw,22px)] leading-relaxed text-zinc-200 tracking-widest max-w-xl text-justify">
               Calcutta Hacks 2.0 is an intense 36-hour hackathon where developers, designers, and
-              innovators come together to build real solutions 💡. It’s a place where ideas evolve
-              into working products 🚀 through collaboration, creativity, and rapid execution.
+              innovators come together to build real solutions. It’s a place where ideas evolve
+              into working products through collaboration, creativity, and rapid execution.
             </p>
 
-            <p className="rajdhani text-[clamp(15px,1.15vw,22px)] leading-relaxed text-zinc-300">
+            <p className="rajdhani text-[clamp(15px,1.15vw,22px)] leading-relaxed text-zinc-200 tracking-widest max-w-xl text-justify">
               Work with talented teammates, solve meaningful challenges, connect with
-              industry-minded builders, and showcase what you can create under pressure ⏳ while
+              industry-minded builders, and showcase what you can create under pressure while
               learning and growing throughout the journey.
             </p>
           </div>

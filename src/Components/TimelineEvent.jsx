@@ -12,6 +12,7 @@ const TimelineEvent = ({
   activeTab,
 }) => {
   const eventRef = useRef(null);
+  const dayLabels = ["Day 1", "Day 2", "Day 3"];
 
   useEffect(() => {
     gsap.set(eventRef.current, {
@@ -60,7 +61,7 @@ const TimelineEvent = ({
 
           {isActive && (
             <span className="text-red-300 text-xs sm:text-sm font-medium px-3 py-1.5 rounded-full border border-red-400/50 bg-red-900/30">
-              {activeTab === 0 ? "Day 1" : "Day 2"}
+              {dayLabels[activeTab]}
             </span>
           )}
         </div>
