@@ -10,6 +10,7 @@ import Footer from "./sections/Footer.jsx";
 import Schedules from "./sections/Timeline.jsx";
 import Judges from "./sections/Judges.jsx";
 import Mentors from "./sections/Mentors.jsx";
+import Tracks from "./sections/Tracks.jsx";
 
 
 
@@ -56,8 +57,13 @@ function App() {
       <Hero />
       <About />
 
-      {/* Schedule / Timeline - important to show early */}
+
+      <Tracks />
+
+   
       <Schedules />
+
+
 
 
          <div
