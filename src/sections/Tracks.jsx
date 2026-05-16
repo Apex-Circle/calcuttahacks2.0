@@ -1,7 +1,7 @@
 import React from 'react';
 import { Code, Landmark, Target, Sparkles, Bus, Award } from 'lucide-react';
 import GlareHover from '../Components/GlareHover';
-import { FaCloudRain } from 'react-icons/fa6';
+import { FaArrowRight, FaCloudRain } from 'react-icons/fa6';
 
 
 export const VintageCard = ({ children, className }) => {
@@ -57,13 +57,13 @@ const Tracks = () => {
   ];
 
   return (
-    <section id="tracks" className="py-20 h-fit bg-gradient-to-b from-red-900/20 via-black to-red-900/30 relative" >
+    <section id="tracks" className="py-20 h-fit bg-linear-to-b from-red-900/20 via-black to-red-900/30 relative" >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
         
 
 
-          <h2 className="blowbrush text-[4vw] leading-none text-transparent bg-clip-text bg-gradient-to-r from-red-400 via-red-600 to-red-900 drop-shadow-[0_0_25px_rgba(255,0,60,0.8)]">
+          <h2 className="blowbrush text-[4vw] leading-none text-transparent bg-clip-text bg-linear-to-r from-red-400 via-red-600 to-red-900 drop-shadow-[0_0_25px_rgba(255,0,60,0.8)]">
                 HACKATHON TRACKS
       </h2>
 
@@ -91,20 +91,25 @@ const Tracks = () => {
                   glareSize={220}
                   transitionDuration={600}
                   playOnce={false}
-                  className="flex flex-col h-full w-full p-6 text-left"
+                  className="flex flex-col h-full w-full p-6 text-left "
                 >
+
+                     <div className="absolute w-20 h-20 rounded-full bg-linear-to-tr from-amber-400/30 via-orange-500/25 to-rose-500/10 blur-2xl opacity-80 z-30 -right-5 -top-5"></div>
+
+                    <div className="absolute w-20 h-20 rounded-full bg-linear-to-bl from-amber-400/30 via-orange-500/25 to-rose-500/10 blur-2xl opacity-80 z-30 -left-5 -bottom-5"></div>
+
                   <div className="flex items-center gap-4 mb-4">
-                    <div className="rounded-full p-3 bg-gradient-to-tr from-orange-500 to-pink-600 text-white shadow-md">
+                    <div className="rounded-full p-3 bg-linear-to-tr from-orange-500 to-pink-600 text-white shadow-md">
                       {track.icon ? <track.icon className="w-6 h-6" /> : <FaCloudRain className="w-6 h-6" />}
                     </div>
-                    <h3 className="font-display text-2xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-orange-400 via-orange-500 to-red-500">
+                    <h3 className="font-display text-2xl font-bold text-transparent bg-clip-text bg-linear-to-r from-orange-400 via-orange-500 to-red-500">
                       {track.title}
                     </h3>
                   </div>
                   <p className="rajdhani text-gray-200 leading-relaxed mb-4">{track.desc}</p>
-                  <div className="mt-auto">
-                    <button className="inline-flex items-center gap-2 px-4 py-2 rounded-md bg-gradient-to-r from-orange-500 to-red-500 text-white font-semibold shadow-sm hover:brightness-105 transition">
-                      Learn More
+                  <div className="mt-auto w-full flex justify-end ">
+                    <button className="inline-flex items-center gap-2 px-4 py-2 rounded-md bg-linear-to-r from-orange-500 to-red-500 text-white font-semibold shadow-sm hover:brightness-105 transition">
+                    Learn More <FaArrowRight />
                     </button>
                   </div>
                 </GlareHover>

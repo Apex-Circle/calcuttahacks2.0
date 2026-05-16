@@ -80,10 +80,9 @@ const GlareHover = ({
       onMouseEnter={animateIn}
       onMouseLeave={animateOut}
     >
-      <div ref={overlayRef} >
 
-  
-      </div>
+
+
     
       {children}
     </div>
