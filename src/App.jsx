@@ -84,6 +84,31 @@ function App() {
 
       <Tracks />
 
+
+          <div
+          style={{ height: "fit-content", position: "relative", overflow: "hidden" }}
+          className="shadow-lg  bg-red-900/10 py-4 flex items-center justify-center relative  border border-red-500/20"
+        >
+          <LogoLoop
+            logos={calcuttaLogosTop}
+            speed={80}
+            direction="left"
+            logoHeight={80}
+            gap={48}
+            hoverSpeed={10}
+            scaleOnHover
+            fadeOut
+            fadeOutColor="#000000"
+            ariaLabel="Calcutta Hacks 2.0 — top loop"
+            className="mix-blend-screen "
+            style={{
+              "--logoloop-gap": `48px`,
+              "--logoloop-logoHeight": `80px`,
+              filter: "saturate(130%) contrast(105%) drop-shadow(0 6px 18px rgba(0,200,255,0.12))",
+            }}
+          />
+        </div>
+
    
       <Schedules />
 

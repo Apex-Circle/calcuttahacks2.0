@@ -47,8 +47,18 @@ const Timeline = () => {
   return (
     <div
       id="timeline"
-      className="w-full min-h-screen py-8 md:py-20 bg-gradient-to-b from-black via-black/95 to-black"
+      className="relative w-full min-h-screen py-8 md:py-20 bg-linear-to-b from-red-900/20 via-black to-red-900/20"
+      
     >
+
+
+
+      {/* Ambient blobs */}
+      <div className="absolute top-[30%] left-[4%] w-[25vh] h-[25vh] rounded-full bg-red-600 opacity-20 filter blur-3xl animate-pulse pointer-events-none" />
+      <div className="absolute bottom-[20%] right-[5%] w-[25vh] h-[25vh] rounded-full bg-red-800 opacity-15 filter blur-3xl animate-pulse pointer-events-none" />
+
+
+      
       <div className="container mx-auto px-3 sm:px-4 md:px-6 lg:px-8">
         <div className="text-center mb-8 md:mb-16">
           <div className="flex items-center justify-center mt-8 md:mt-[15vh] z-10 mb-4 md:mb-6">
