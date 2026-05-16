@@ -57,18 +57,9 @@ function App() {
       <Hero />
       <About />
 
-
-      <Tracks />
-
-   
-      <Schedules />
-
-
-
-
          <div
           style={{ height: "fit-content", position: "relative", overflow: "hidden" }}
-          className="shadow-lg  bg-red-900/10 py-4 flex items-center justify-center relative rounded-3xl border border-red-500/20"
+          className="shadow-lg  bg-red-900/10 py-4 flex items-center justify-center relative  border border-red-500/20"
         >
           <LogoLoop
             logos={calcuttaLogosTop}
@@ -89,6 +80,17 @@ function App() {
             }}
           />
         </div>
+
+
+      <Tracks />
+
+   
+      <Schedules />
+
+
+
+
+      
 
       {/* Prizes */}
       <PRIZES />

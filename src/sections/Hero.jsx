@@ -53,7 +53,7 @@ const Hero = () => {
 
       {/* Bottom Glass Bar */}
       <div className="absolute bottom-0 w-full flex justify-center z-30">
-        <div className="flex items-center justify-between p-2 w-fit h-[9vh] bg-black/80 backdrop-blur-md border border-red-900/40 rounded-t-xl shadow-[0_0_20px_rgba(255,0,60,0.2)]">
+        <div className="flex items-center justify-between p-2 w-fit h-[9vh] bg-black/80 backdrop-blur-md border-t-b border-red-900/40 rounded-t-xl shadow-[0_0_20px_rgba(255,0,60,0.2)]">
           <HeroGlassBarCard
             title={"Date"}
             highlight={"24th - 26th Dec"}

@@ -28,7 +28,7 @@ const features = [
 
 const About = () => {
   return (
-    <section className="flex items-center justify-center relative w-full overflow-hidden py-[10vh] bg-linear-to-b from-black/30 via-black to-red-900/20 text-white md:h-screen">
+    <section id="about" className="flex items-center justify-center relative w-full overflow-hidden py-[10vh] bg-linear-to-b from-black/30 via-black to-red-900/20 text-white md:h-screen">
       {/* Background Glow Effects */}
       <div className="absolute top-[10%] left-[5%] h-[28rem] w-[28rem] rounded-full bg-red-600/20 blur-[140px]" />
       <div className="absolute bottom-[0%] right-[0%] h-[25rem] w-[25rem] rounded-full bg-red-500/20 blur-[120px]" />
