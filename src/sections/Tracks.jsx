@@ -58,7 +58,7 @@ const Tracks = () => {
 
   return (
     <section id="tracks" className="py-20 h-fit bg-linear-to-b from-red-900/20 via-black to-red-900/30 relative" >
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 my-[10vh]">
         <div className="text-center mb-16">
         
 
@@ -91,7 +91,7 @@ const Tracks = () => {
                   glareSize={220}
                   transitionDuration={600}
                   playOnce={false}
-                  className="flex flex-col h-full w-full p-6 text-left "
+                  className="flex flex-col h-[30vh] w-full p-6 text-left "
                 >
 
                      <div className="absolute w-20 h-20 rounded-full bg-linear-to-tr from-amber-400/30 via-orange-500/25 to-rose-500/10 blur-2xl opacity-80 z-30 -right-5 -top-5"></div>
@@ -106,7 +106,7 @@ const Tracks = () => {
                       {track.title}
                     </h3>
                   </div>
-                  <p className="rajdhani text-gray-200 leading-relaxed mb-4">{track.desc}</p>
+                  <p className="rajdhani text-gray-200 leading-relaxed text-[1.150rem] mb-4">{track.desc}</p>
                   <div className="mt-auto w-full flex justify-end ">
                     <button className="inline-flex items-center gap-2 px-4 py-2 rounded-md bg-linear-to-r from-orange-500 to-red-500 text-white font-semibold shadow-sm hover:brightness-105 transition">
                     Learn More <FaArrowRight />
