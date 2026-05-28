@@ -8,8 +8,7 @@ import FAQ from "./sections/Faq.jsx";
 import PRIZES from "./sections/Prizes.jsx";
 import Footer from "./sections/Footer.jsx";
 import Schedules from "./sections/Timeline.jsx";
-import Judges from "./sections/Judges.jsx";
-import Mentors from "./sections/Mentors.jsx";
+import JudgesMentors from "./sections/JudgesMentors.jsx";
 import Tracks from "./sections/Tracks.jsx";
 
 
@@ -85,9 +84,28 @@ function App() {
       <Tracks />
 
 
-          <div
+        
+   
+      <Schedules />
+
+
+
+
+      
+
+      {/* Prizes */}
+      <PRIZES />
+
+
+        
+
+      {/* Team, Judges & Mentors (combined) */}
+      <Team />
+
+
+        <div
           style={{ height: "fit-content", position: "relative", overflow: "hidden" }}
-          className="shadow-lg  bg-red-900/10 py-4 flex items-center justify-center relative  border border-red-500/20"
+          className="shadow-lg  bg-red-900/10 py-4 flex items-center justify-center relative my-[5vh] border border-red-500/20"
         >
           <LogoLoop
             logos={calcuttaLogosTop}
@@ -109,24 +127,8 @@ function App() {
           />
         </div>
 
-   
-      <Schedules />
 
-
-
-
-      
-
-      {/* Prizes */}
-      <PRIZES />
-
-
-        
-
-      {/* Team, Judges, Mentors */}
-      <Team />
-      <Judges />
-      <Mentors />
+      <JudgesMentors />
 
       {/* Sponsors block (logo loops) */}
       <div className="mt-[6vh] space-y-6" data-scroll-section>
